@@ -143,7 +143,8 @@ class Bingo {
 
         this.count = trueCount;
 
-        if (trueCount === this.drSayings.length) {
+        // There is only 24 cells but more sayings than this
+        if ((trueCount === this.drSayings.length) || (trueCount >= 24)) {
             this.bingoMessageElement.classList.remove('hidden');
             this.countContainerElement.classList.add('all-said');
         }
